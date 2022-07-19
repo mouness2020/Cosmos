@@ -106,10 +106,11 @@ Shows: ★★★★☆ (123)
     // Create star layers
     // ------------
     
+      let isRightToLeft = settings.isRTL ?? RightToLeft.isRightToLeft(self)
     var layers = CosmosLayers.createStarLayers(
       rating,
       settings: settings,
-      isRightToLeft: RightToLeft.isRightToLeft(self)
+      isRightToLeft: isRightToLeft//RightToLeft.isRightToLeft(self)
     )
     
     // Create text layer
